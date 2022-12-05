@@ -29,7 +29,7 @@ $(document).ready(function(){
     
 
     if(reg.test($('#nome').val()) && reg2.test($('#email').val()) && reg3.test($('#telefone').val())){
-      alert('Você está cadastrado!');
+      alert('Mensagem Enviada!');
     }else{
       e.preventDefault();
   
