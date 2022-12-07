@@ -28,11 +28,15 @@ html, body{
 }
 
 .paginas{
-  height: calc(100vh - 190px);
+  min-height: 100vh;
 }
 
 .paginas .banner a{
  background-color: #04161A;
+}
+
+.cards{
+  display: flex;
 }
 
 form input[type="submit"]{
@@ -42,6 +46,12 @@ form input[type="submit"]{
 
 footer{
   background-color: #04161A;
+  position: absolute;
+  bottom: 0;
+}
+
+footer .container{
+  display: flex;
 }
 
 footer img{
@@ -51,4 +61,28 @@ footer img{
 
 a{
   text-decoration: none;
+}
+
+@media screen and (max-width: 1000px){
+  .lado-direito{
+    padding-bottom: 150px;
+  }
+
+  footer .container{
+    display: block;
+  }
+
+  footer .sob{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards{
+    display: block;
+  }
+
+  .sub-espaco{
+    
+    padding-bottom: 500px;
+  }
 }
