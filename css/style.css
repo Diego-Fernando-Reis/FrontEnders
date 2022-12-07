@@ -27,6 +27,10 @@ html, body{
  background-color: #04161A;
 }
 
+.paginas{
+  height: calc(100vh - 190px);
+}
+
 .paginas .banner a{
  background-color: #04161A;
 }

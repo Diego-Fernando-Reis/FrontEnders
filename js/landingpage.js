@@ -1,5 +1,4 @@
 const cep = document.getElementById('cep');
-const estado = document.getElementById('estado');
 const bairro = document.getElementById('bairro');
 const cidade = document.getElementById('cidade');
 const rua = document.getElementById('rua');
@@ -11,22 +10,23 @@ const confirmacao = document.getElementById('confirmacao');
 
 var xhr = new XMLHttpRequest();
 
-cep.addEventListener('blur', ()=>{
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      let responseTexte = JSON.parse(this.responseText);
-      console.log(responseTexte);
-      estado.value = responseTexte.uf;
-      bairro.value = responseTexte.bairro;
-      cidade.value = responseTexte.localidade;
-      rua.value = responseTexte.logradouro;
+$('#cep').blur(() =>{
+  $.ajax({
+    url: `https://viacep.com.br/ws/${cep.value}/json/`,
+    success: function(data){
+      try{
+        console.log(data)
+        $('#estado').val(data.uf);
+        $('#bairro').val(data.bairro);
+        $('#cidade').val(data.localidade);
+        $('#rua').val(data.logradouro);
+      }
+      catch(error){
+        console.log('Deu algum erro!')
+      }
     }
   });
-  
-  xhr.open("GET", `https://viacep.com.br/ws/${cep.value}/json/`);
-  xhr.responseType = 'text';
-  xhr.send();
-})
+});
 
 $('#nome').blur( ()=>{
   let validar = new Validate('nome', /^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/, $('#nome').val());

@@ -79,18 +79,26 @@
     </div>
   
     <div class="direita w-100 text-white">
-      <header class="navbar navbar-expand-lg px-5 py-2">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white fs-2 fw-bold" href="../index.html">FrontEnders</a>
-          <ul class="navbar-nav">
-            <li class="me-3"><a class="text-white" href="../index.html">HOME</a></li>
-            <li class="me-3"><a class="text-white" href="./servicos.html">SERVIÇO</a></li>
-            <li class="me-3"><a class="text-white" href="./contato.html">CONTATO</a></li>
-          </ul>
-        </div>
+      <header>
+        <nav class="navbar navbar-expand-lg px-5 py-2">
+          <div class="container-fluid">
+            <a class="navbar-brand text-white fs-2 fw-bold" href="../index.html">FrontEnders</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="text-white ms-3" href="../index.html">HOME</a>
+                <a class="text-white ms-3" href="./servicos.html">SERVIÇO</a>
+                <a class="text-white ms-3" href="./contato.html">CONTATO</a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </header>
         
       <div class="paginas container mx-auto mt-5 mb-5" id="paginas">
+        <h2 class="text-center mb-5">Lista de Espera</h2>
         <form action="" id="form" class="w-50 mx-auto">
           <div class="nome">
             <div class="alert alert-danger p-2 d-none" id="alertnome" role="alert">
