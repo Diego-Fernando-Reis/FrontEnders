@@ -44,6 +44,10 @@ form input[type="submit"]{
  border: none;
 }
 
+form input{
+ color: white;
+}
+
 footer{
   background-color: #04161A;
   position: absolute;
