@@ -48,6 +48,10 @@ form input{
  color: white;
 }
 
+form textarea{
+ color: white;
+}
+
 footer{
   background-color: #04161A;
   position: absolute;
