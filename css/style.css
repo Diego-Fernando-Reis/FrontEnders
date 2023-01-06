@@ -6,10 +6,29 @@
 }
 
 html, body{
- background-image: url('../images/textura.png');
+ background-image: url('../images/grid4.png');
  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgb(22, 22, 22);
+}
+
+header{
+  background-color: #303030;
+  box-shadow: 0 0 25px #00db58;
+  animation: neonEffect 3s infinite linear;
+}
+
+@keyframes neonEffect{
+  0%,
+  100%{
+    background-color: #00db58;
+  }
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
 }
 
 .interno{
@@ -32,7 +51,15 @@ html, body{
 }
 
 .paginas .banner a{
- background-color: #04161A;
+  background-color: #303030;
+  box-shadow: 0 0 20px #00db58;
+  animation: neonEffect 3s infinite linear;
+  color: black;
+  font-weight: bolder;
+}
+
+.paginas .banner h1{
+  border-bottom: 0.5px solid rgba(245, 245, 245, 0.055);
 }
 
 .cards{
