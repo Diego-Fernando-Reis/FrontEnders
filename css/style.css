@@ -62,6 +62,11 @@ nav a{
   border-bottom: 0.5px solid rgba(245, 245, 245, 0.055);
 }
 
+.esquerda{
+  background-position: center top;
+  background-size: cover;
+}
+
 .cards{
   display: flex;
 }
@@ -80,7 +85,9 @@ form textarea{
 }
 
 footer{
-  background-color: #04161A;
+  background-color: #303030;
+  box-shadow: 0 0 25px #00db58;
+  animation: neonEffect 3s infinite linear;
   position: absolute;
   bottom: 0;
 }
@@ -96,6 +103,12 @@ footer img{
 
 a{
   text-decoration: none;
+  color: black;
+}
+
+footer p{
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1000px){
